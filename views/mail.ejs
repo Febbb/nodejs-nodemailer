@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mailer</title>
+	<link rel="shortcut icon" href="/assets/img/mail.png">
+
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap.css"  >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="/js/jquery-3.6.0.js"  ></script>
+	<script type="text/javascript" src="/socket.io/socket.io.js "></script>
+ 	<script src="/js/chat.js"  ></script>
+ 
+ 
+
+
+   
+	
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row justify-content-center">
+		<div class="col-lg-5 mt-4">
+			<div class="jumbotron">
+				<div class="alert alert-info" role="alert">
+				  ** Pastikan Email sudah di konfigurasi access pihak ke - 3 dan sudah terhubung internet !
+				</div>
+				<h1>Mailer - Send </h1>
+
+				<div id="messege-list">
+					
+
+				</div>
+
+				<hr>
+
+				<form action="http://localhost:3010/mailer/mail" method="post">
+					<div class="input-group mb-3">
+					  <div class="input-group-prepend">
+					    <span class="input-group-text" id="basic-addon1">@</span>
+					  </div>
+					  <input name="from_email" type="text" class="form-control" placeholder="from email" aria-label="email" aria-describedby="basic-addon1" id="from_email">
+					</div>
+					<div class="input-group mb-3">
+					  <div class="input-group-prepend">
+					    <span class="input-group-text" id="basic-addon1"><img style="width: 15px;height: 15px;" src="/assets/img/lock.png"></span>
+					  </div>
+					  <input name="password" type="password" class="form-control" placeholder="password" aria-label="email" aria-describedby="basic-addon1" id="password">
+					</div>
+
+					<hr>
+
+					<div class="input-group mb-3">
+					  <div class="input-group-prepend">
+					    <span class="input-group-text" id="basic-addon1">@</span>
+					  </div>
+					  <input name="to_email" type="text" class="form-control" placeholder="to email" aria-label="email" aria-describedby="basic-addon1" id="to_email" >
+					</div>
+
+					<div class="input-group mb-3">
+					  <div class="input-group-prepend">
+					    <span class="input-group-text" id="basic-addon1"><img style="width: 15px;height: 15px;" src="/assets/img/mail.png"></span>
+					  </div>
+					  <input name="messege" type="text" class="form-control" placeholder="Messege" aria-label="messege" aria-describedby="basic-addon1" id="messege">
+					</div>
+					 
+					<button type="submit" id="sendMessege" class="btn btn-info"> send </button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<script src="/js/jquery-3.6.0.js"  ></script>
+<script src="/js/popper.js"  ></script>
+<script src="/bootstrap/js/bootstrap.js" ></script>	
+<script src="/bootstrap/js/bootstrap.bundle.min.js"  ></script>	
+</body>
+</html>
