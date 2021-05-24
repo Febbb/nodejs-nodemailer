@@ -18,18 +18,6 @@ app.use(body.urlencoded({extended:false}));
 const mailerRouter = require("./routes/mailerRouter");
 app.use("/mailer",mailerRouter);
 
-// app.get('/index', (request,response)=>{
-// 	response.render('portofolioViews');
-// })
-
-// let UserOnline = 1 ;
-// 		io.on('connection', client =>{
-// 			client.on('join' ,param =>{
-// 				console.log('user join');
-// 				io.emit('UserOnline', UserOnline);
-// 			})
-// 		})
-
 server.listen(3010,function(){
 	console.log("server listening port 3010");
 	console.log(process.env.email_from);
